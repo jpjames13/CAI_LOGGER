@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
-using System.Windows.Threading; 
+using System.Windows.Threading;
+using System.Configuration;
 
 namespace CAI_LOGGER
 {
     public partial class Form1 : Form
     {
-        public static int LPmax { get; set; }
-        public static int CDmax { get; set; }
+        public static int LPmax = Convert.ToInt32(Setting.GetSetting("LPMAX"));
+        public static int CDmax = Convert.ToInt32(Setting.GetSetting("CDMAX"));
 
         public static int LPcounter2 { get; set; }
         public static int CDcounter2 { get; set; }
@@ -101,22 +102,23 @@ namespace CAI_LOGGER
         public static void popupbx()
         {
             popup form = new popup();
-            form.TopMost = true;
+            form.TopMost = true;    
             form.Show(); 
         }
-         
-        # region THE CHECKER METHOD THAT BECAME ASYNC AWAIT SAVIOR
+
+
+        #region THE CHECKER METHOD THAT BECAME ASYNC AWAIT SAVIOR
         public async static void checker()
         { 
             while(true)
             { 
-                if (CDCreated/2 > CDmax)
+                if (CDCreated == CDmax)
                 {   
                     popupbx();      
                     CDCreated = 0; 
                     //break;
                 }
-                if (LPCreated/2 > LPmax)
+                if (LPCreated == LPmax)
                 { 
                     popupbx();
                     LPCreated = 0;
