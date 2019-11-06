@@ -1,0 +1,14 @@
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\bin\Debug\CAI_LOGGER.exe.config
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\bin\Debug\CAI_LOGGER.exe
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\bin\Debug\CAI_LOGGER.pdb
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.csprojAssemblyReference.cache
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.Properties.Resources.resources
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.csproj.GenerateResource.cache
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.csproj.CoreCompileInputs.cache
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.exe
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.pdb
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\bin\Debug\Microsoft.SqlServer.FileSystemTask.dll
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.csproj.CopyComplete
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.Form1.resources
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.Setting.resources
+C:\Users\e018781\source\repos\CAI_LOGGER\CAI_LOGGER\obj\Debug\CAI_LOGGER.popup.resources
