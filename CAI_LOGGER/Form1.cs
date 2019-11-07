@@ -39,7 +39,7 @@ namespace CAI_LOGGER
         public Form1()
         {
             InitializeComponent();
-
+             
             watch();
             ////Implementing Threads asynchronously
             //Thread oThreadone = new Thread(() =>
@@ -60,6 +60,8 @@ namespace CAI_LOGGER
             //oThreadtwo.Start();
             //oThreadtwo.IsBackground = true;
             checker();
+
+            this.FormClosing += Form1_FormClosing;
         } 
         //Ignore
         #region
@@ -106,6 +108,68 @@ namespace CAI_LOGGER
             form.Show(); 
         }
 
+        #region     Handling Form close event
+        //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    if (string.Equals((sender as Button).Name, @"CloseButton"))
+        //        // Do something proper to CloseButton.
+        //        e.Cancel = true;
+        //    else
+        //        // Then assume that X has been clicked and act accordingly.
+        //        MessageBox.Show("Anda Pasti Anda Nak Close CAI LOGGER");
+        //}
+
+        public void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+                // Prompt user to save his data
+                //MessageBox.Show("Anda Pasti Anda Nak Close CAI LOGGER");
+                switch (MessageBox.Show(this, "Anda Pasti Nak Tutup?", "Continue", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    //Stay on this form
+                    case DialogResult.No:
+                        e.Cancel = true;
+                        break;
+                    default:
+                        break;
+                }
+            if (e.CloseReason == CloseReason.WindowsShutDown)
+                MessageBox.Show("Anda Pasti Anda Nak Close CAI LOGGER");
+                // Prompt user to save his data
+                //MessageBox.Show("Anda Pasti Anda Nak Close CAI LOGGER");
+                switch (MessageBox.Show(this, "Anda Pasti Nak Tutup?", "Continue", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    //Stay on this form
+                    case DialogResult.No:
+                        e.Cancel = true;
+                        break;
+                    default:
+                        break;
+                }
+        }
+
+
+        //private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
+        //{
+        //    //In case windows is trying to shut down, don't hold the process up
+        //    if (e.CloseReason == CloseReason.WindowsShutDown) return;
+
+        //    if (this.DialogResult == DialogResult.Cancel)
+        //    {
+        //        // Assume that X has been clicked and act accordingly.
+        //        // Confirm user wants to close
+        //        switch (MessageBox.Show(this, "Are you sure?", "Do you still want ... ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+        //        {
+        //            //Stay on this form
+        //            case DialogResult.No:
+        //                e.Cancel = true;
+        //                break;
+        //            default:
+        //                break;
+        //        }
+        //    }
+        //}
+        #endregion
 
         #region THE CHECKER METHOD THAT BECAME ASYNC AWAIT SAVIOR
         public async static void checker()
